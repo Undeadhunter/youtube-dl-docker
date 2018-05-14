@@ -12,4 +12,4 @@ RUN pip install youtube-dl
 
 WORKDIR /output
 
-ENTRYPOINT youtube-dl $RUN-OPTS $URL
+CMD youtube-dl -o $RUN-OPTS $URL
