@@ -1,6 +1,7 @@
 FROM alpine
 
 ADD entrypoint.sh /
+RUN chmod +x /entrypoint.sh
 
 RUN apk update \
 	&& apk add py2-pip ca-certificates \
