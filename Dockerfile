@@ -1,5 +1,7 @@
 FROM alpine
 
+ADD entrypoint.sh
+
 RUN apk update \
 	&& apk add py2-pip ca-certificates \
 	&& apk add ffmpeg \
@@ -11,6 +13,5 @@ ENV URL = ""
 
 RUN pip install youtube-dl
 
-WORKDIR /output
 
-CMD youtube-dl $RUN-OPTS -o $FORMAT $URL
+CMD entrypoint.sh
