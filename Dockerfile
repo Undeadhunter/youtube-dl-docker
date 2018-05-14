@@ -8,4 +8,6 @@ RUN apk update \
 
 RUN pip install youtube-dl
 
+WORKDIR /output
+
 ENTRYPOINT ["youtube-dl"]
