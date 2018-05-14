@@ -13,5 +13,6 @@ ENV URL = ""
 
 RUN pip install youtube-dl
 
+VOLUME /output
 
 CMD entrypoint.sh
