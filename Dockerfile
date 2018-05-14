@@ -5,7 +5,7 @@ RUN apk update \
 	&& apk add ffmpeg \
 	&& rm -rf /var/cache/apk/*
 
-ENV RUN-OPTS
+ENV RUN-OPTS = "" 
 
 RUN pip install youtube-dl
 
