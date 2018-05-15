@@ -1,5 +1,3 @@
 #!/bin/sh
 
-echo youtube-dl $RUNOPTS -o '$FORMAT' "$URL"
-cd /output
-youtube-dl $RUNOPTS -o "$FORMAT" "$URL"
+youtube-dl $RUNOPTS -o "/output/$FORMAT" "$URL"
