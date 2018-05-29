@@ -1,5 +1,8 @@
 #!/bin/sh
 
-chown nobody:users /output
+USERID=${PUID:-99}
+GROUPID=${PGID:-100}
 
-gosu nobody youtube-dl --no-cache-dir $RUNOPTS -o "/output/$FORMAT" "$URL"
+chown $USERID:$GROUPID /output
+
+gosu $USERID:$GROUPID youtube-dl --no-cache-dir $RUNOPTS -o "/output/$FORMAT" "$URL"
