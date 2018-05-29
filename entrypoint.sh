@@ -1,3 +1,5 @@
 #!/bin/sh
 
-youtube-dl $RUNOPTS -o "/output/$FORMAT" "$URL"
+chown nobody:users /output
+
+gosu nobody youtube-dl --no-cache-dir $RUNOPTS -o "/output/$FORMAT" "$URL"
